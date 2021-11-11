@@ -9,7 +9,7 @@ describe('测试 watch 方法', () => {
     const fn = jest.fn((newV, oldV) => [newV, oldV])
 
     watch(r, fn)
-    
+
     r.a = 123
     const [newV1, oldV1] = fn.mock.results[0].value
     expect(fn.mock.calls.length).toBe(1)
